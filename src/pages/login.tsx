@@ -1,4 +1,3 @@
-import {Link} from 'umi';
 import {useState} from "react";
 
 export default function Login() {

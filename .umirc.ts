@@ -8,4 +8,11 @@ export default defineConfig({
         {path: "/*", component: "@/pages/404", layout: false}
     ],
     npmClient: 'npm',
+    proxy: {
+        '/api': {
+            'target': 'http://localhost:16000/',
+            'changeOrigin': true,
+            'pathRewrite': {'^/api': ''},
+        }
+    },
 });
